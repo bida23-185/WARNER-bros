@@ -1,0 +1,712 @@
+/* General body styles */
+body{
+    margin: 0px;
+    padding: 0px;
+    font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; /* Font stack with fallbacks */          
+    background-color: #9f9f9f; /* Light gray background */
+    
+}
+/* Reset box-sizing for consistent element sizing *
+*{
+    box-sizing: border-box;
+}
+/* Remove default list styles and text decoration from links */
+ul{
+    list-style: none;
+}
+a{
+    text-decoration: none;
+}
+/* Navigation bar styling */
+nav{
+    display: flex; /* Flexible layout for navigation items */
+    justify-content: space-around; /* Evenly distribute items */
+    align-items: center; /* Vertically align items */
+    width: 100%; /* Full width */
+    background-color: rgb(0, 0, 0); /* Black background */
+}
+.logo img { /* Logo image styling */
+    height: 45px;
+}
+
+nav .menu { /* Menu container */
+    display: flex; /* Horizontal layout for menu items */
+}
+
+/* Menu item link styling */
+nav .menu li a {
+    height: 40px;
+    line-height: 43px;
+    margin: 0px;
+    padding: 0px 22px;
+    display: flex;
+    font-size: 0.8rem;
+    text-transform: uppercase;
+    font-weight: 500;
+    color: #ffffff; /* White text */
+    letter-spacing: 1px;
+}
+
+/* Search bar styling */
+.search {
+    width: 250px;
+    height: 40px;
+    background-color: rgba(251, 245, 245, 0.8); /* Semi-transparent white background */
+    display: flex;
+    justify-content: center; /* Center horizontally */
+    align-items: center; /* Center vertically */
+    border-radius: 20px; /* Rounded corners */
+    padding: 0px 20px;
+    justify-content: flex-end; /* Align search icon to the right */
+}
+
+.search input { /* Search input field styling */
+    width: 100%;
+    height: 30px;
+    border: none;
+    outline: none;
+    background-color: transparent; /* Transparent background */
+}
+
+.search i { /* Search icon styling (assuming you're using a font icon library) */
+    color: #ffffff; /* White icon */
+}
+
+/* Hover effect for menu item links */
+nav .menu li a:hover {
+    background-color: #e8ebf3; /* Light blue background on hover */
+    color: #ffffff; /* White text */
+    box-shadow: 5px 10px 30px rgba(0, 0, 0, 0.1); /* Subtle box shadow on hover */
+    transition: all ease; /* Smooth transition for the hover effect */
+}
+
+/* Styling for the main slider container */
+#main-slider {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 20px auto;
+    max-width: 1160px;
+    width: 100%;
+}
+
+.main-slider-box {           /* Styles each individual slide within the slider */
+    width: 100%;                /* Occupies full width of its parent container */
+    height: 410px;              /* Sets a fixed height for the slide */
+    box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.1); /* Adds a subtle drop shadow */
+    border: 1px solid #ffffffc2; /* Adds a semi-transparent white border */
+    position: relative;         /* Enables absolute positioning for child elements */
+    overflow: hidden;           /* Hides content that exceeds the slide's dimensions */
+    user-select: none;          /* Prevents the user from selecting text within the slide */
+}
+
+.main-slider-img {  /* Container for the slide's image */
+    width: 100%; /* Takes up full width of the parent (slide) */
+    height: 100%; /* Takes up full height of the parent (slide) */
+}
+
+.main-slider-img img {   /* Styles the image itself */
+    width: 100%;       /* Fills the entire container width */
+    height: 100%;      /* Fills the entire container height */
+    object-fit: cover;  /* Scales the image to cover the container while maintaining aspect ratio */
+    object-position: center; /* Positions the image in the center of the container */
+}
+
+.main-slider-text {    /* Container for text overlay on the slide */
+    position: absolute;           /* Positions the text on top of the image */
+    left: 0px;                    /* Aligns to the left edge of the slide */
+    top: 0px;                     /* Aligns to the top edge of the slide */
+    width: 100%;                  /* Takes up full width of the slide */
+    height: 100%;                 /* Takes up full height of the slide */
+    background-color: linear-gradient(360deg, #0e0d0db9 35%, rgba(73, 73, 73, 0.23) 64%); 
+    /* Adds a semi-transparent gradient overlay from top to bottom */
+    display: flex;               /* Enables flexbox for easy layout */
+    flex-direction: column;       /* Arranges content vertically */
+    align-items: flex-start;     /* Aligns items to the left */
+    justify-content: space-between; /* Distributes space evenly between items */
+    padding: 25px;               /* Adds padding around the text content */
+}
+.main-slider-text .quality{ 
+    background-color:none;
+    color: #ffffff;
+    font-weight: 600;
+    padding: 0px 5px;
+    height: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: centre;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+}
+.main-slider-text .movie-name{
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+}
+.main-slider-text .movie-name span{
+    font-size: 0.9rem;
+    letter-spacing: 1px;
+    font-weight: 400;
+    color: rgba(255, 255, 255, 0.82);
+}
+.main-slider-text .movie-name strong
+.main-slider-text .movie-name a{
+    font-size: 1rem;
+    font-weight: 500;
+    line-height: 20px;
+    margin-top: 10px;
+    color: #dfdfdf;
+    letter-spacing: 0.5px;
+}
+.main-slider-text .category{
+    color: #ffffff;
+    font-size: 0.8rem;
+    font-weight: 500;
+}
+.main-slider-text .category a{
+    color: #ffffff;
+    margin: 0px 3px
+}
+strong{
+    color: #fcf9f9;
+}
+.rating img{
+    height: 10px;
+    width: 20px;
+    object-fit: contain;
+    object-position: centre;
+}
+.rating{
+    font-size: 0.8rem;
+    color: #ffffff;
+    letter-spacing: 1px;
+}
+.main-slider-text .category-rating{
+    display: flex;
+    width: 100%;
+    justify-content: space-between;
+    margin-top: 20px;
+}
+.main-slider-overlay{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    left: 0px;
+    top: 100%;
+    background-color: rgba(27,27,27,0.6);
+    display: flex;
+    justify-content: center;
+    align-items: #fff7f7;
+    transition: all ease 0.2s;
+    z-index: 2;
+}
+.main-slider-overlay i{
+    font-size: 2rem;
+}
+
+#latest{
+    max-width: 1170px;
+    margin: 30px auto;
+    width: 100%;
+}
+.latest-heading{
+    width: 20%;
+    padding-top: 1px;
+    padding-bottom: 1px;
+    padding-left: 3px;
+    padding-right: 6px;
+    background-color: none;
+    border: none;
+    border-radius: 80px;
+}
+.latest-heading h1{
+    color: #ffffff;
+    font-size: 1.3rem;
+    font-weight: bold;
+}
+.post-container{
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    grid-gap: 35px;
+    margin: 20px 0px;
+}
+.post-box{
+    width: 100%;
+    height: 440px;
+    overflow: hidden;
+    background-color: #080707c2;
+    border: 1px solid #ffffffb9;
+    box-shadow: 2px 2px 30px rgba(0,0,0,0.15);
+    position: relative;
+
+}
+.post-box .post-img{
+    width: 100%;
+    height: 100%;
+}
+.post-box .post-img img{
+    width: 100%;
+    height: 100%;
+    object-position: top centre;
+    object-fit: cover;
+}
+.main-slider-text .movie-name a:hover{
+    opacity: 0.5;
+    transition: all ease 0.3s;
+}
+.page-number{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #060606;
+    margin-top: 50px;
+}
+.page-number a{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #eeeff2;
+    margin: 0px 13px;
+    opacity: 0.5;
+}
+p{
+    color: #ffffff;
+}
+p{
+    color: #fffcfc;
+    font-size: medium;
+    font-weight: bold;
+}
+.container{
+    min-height: 100vh;
+    background: rgb(255, 255, 255);
+    display: flex;
+    background-color:#ddd;
+    }
+  
+ .container form{
+    margin: center;
+    width: 670px;
+    height: 400px;
+    display: flex;
+    justify-content: center;
+    box-shadow:20px 20px 50px rgba(255, 255, 255, 0) ;
+    border-radius: 15px;
+    backdrop-filter:blur(10px) ;
+    flex-wrap:wrap;
+ }   
+ .container form h1{
+    color: rgb(0, 0, 0);
+    font-weight: 500;
+    margin-top: 10px;
+    width: 500px;
+    text-align: left;
+ }
+ .container form input{
+    width:290;
+    height: 40px;
+    padding-left: 10px;
+    outline: none;
+    border: none;
+    font-size: 15px;
+    margin-bottom: 10px;
+    background: none;
+    border-bottom:2px solid rgb(0, 0, 0) ;
+ }
+ .container form input ::placeholder{
+    color: #000000;
+ }
+ .container form #lastName{
+    margin-bottom: 20px;
+ }
+ .container form h4{
+    color: #000000;
+    font-weight: 300;
+    width: 600px;
+    margin-bottom: 20px;
+ }
+ .container form textarea{
+    background: none;
+    border-radius: 0%;
+    border-bottom: 2px solid black;
+    font-weight: 200;
+    font-size: 15px;
+    padding: 10px;
+    outline: none;
+    min-width: 600px;
+    max-width: 600px;
+    min-height: 100px;
+    max-height: 100px;
+ }
+
+ textarea::-webkit-scrollbar{
+    width: 1rem;
+ }
+
+ textarea::-webkit-textfield-scrollbar-thumb{
+    background-color: rgba(0, 0, 0, 0.713);
+ }
+ 
+ .container form #button{
+    border-bottom-left-radius: 10;
+    background: white;
+    border-radius: 5px;
+    margin-top: 20px;
+    font-weight: 600;
+    font-size: 20px;
+    color:#000000;
+    padding: 0;
+    margin-right: 500px;
+    margin-bottom: 30px;
+    transition: 0.3s;
+ }
+ .container form #button:hover{
+    opacity: 0.7;
+ }
+ 
+
+body{
+    margin: 0px;
+    padding: 0px;
+    font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: #e7e7e7;
+}
+*{
+    box-sizing: border-box;
+}
+ul{
+    list-style: none;
+}
+a{
+    text-decoration: none;
+}
+nav{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    width: 100%;
+    background-color: rgb(0, 0, 0);
+}
+.logo img{
+    height: 45px;
+}
+nav .menu{
+    display: flex;
+}
+nav .menu li a{
+    height: 40px;
+    line-height: 43px;
+    margin: 0px;
+    padding: 0px 22px;
+    display: flex;
+    font-size: 0.8rem;
+    text-transform: uppercase;
+    font-weight: 500;
+    color: #ffffff;
+    letter-spacing: 1px;
+}
+.search{
+    width: 250px;
+    height: 40px;
+    background-color: rgba(251, 245, 245, 0.8);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 20px;
+    padding: 0px 20px;
+    justify-content: flex-end;
+}
+.search input{
+    width: 100%;
+    height: 30px;
+    border:none;
+    outline: none;
+    background-color: transparent;
+}
+.search i{
+    color: #ffffff;
+}
+nav .menu li a:hover{
+    background-color: #e8ebf3;
+    color: #ffffff;
+    box-shadow: 5px 10px 30px rgba(0, 0, 0, 0.1);
+    transition: all ease;
+}
+
+#main-slider{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 20px auto;
+    max-width: 1160px;
+    width: 100%;
+}
+.main-slider-box{
+    width: 100%;
+    height: 410px;
+    box-shadow: 2px 2px 10px rgba(0,0,0,0.1);
+    border: 1px solid #ffffffc2;
+    position: relative;
+    overflow: hidden;
+    user-select: none;
+}
+.main-slider-img{
+    width: 100%;
+    height: 100%;
+}
+.main-slider-img img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center;
+}
+.main-slider-text{
+    position: absolute;
+    left: 0px;
+    top: 0px;
+    width: 100%;
+    height: 100%;
+    background-color: linear-gradient(360deg, #0e0d0db9 35%, rgba(73,73,73,0.23) 64%);
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: space-between;
+    padding: 25px;
+}
+.main-slider-text .quality{ 
+    background-color:none;
+    color: #ffffff;
+    font-weight: 600;
+    padding: 0px 5px;
+    height: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: centre;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+}
+.main-slider-text .movie-name{
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+}
+.main-slider-text .movie-name span{
+    font-size: 0.9rem;
+    letter-spacing: 1px;
+    font-weight: 400;
+    color: rgba(255, 255, 255, 0.82);
+}
+.main-slider-text .movie-name strong
+.main-slider-text .movie-name a{
+    font-size: 1rem;
+    font-weight: 500;
+    line-height: 20px;
+    margin-top: 10px;
+    color: #dfdfdf;
+    letter-spacing: 0.5px;
+}
+.main-slider-text .category{
+    color: #ffffff;
+    font-size: 0.8rem;
+    font-weight: 500;
+}
+.main-slider-text .category a{
+    color: #ffffff;
+    margin: 0px 3px
+}
+strong{
+    color: #fcf9f9;
+}
+.rating img{
+    height: 10px;
+    width: 20px;
+    object-fit: contain;
+    object-position: centre;
+}
+.rating{
+    font-size: 0.8rem;
+    color: #ffffff;
+    letter-spacing: 1px;
+}
+.main-slider-text .category-rating{
+    display: flex;
+    width: 100%;
+    justify-content: space-between;
+    margin-top: 20px;
+}
+.main-slider-overlay{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    left: 0px;
+    top: 100%;
+    background-color: rgba(27,27,27,0.6);
+    display: flex;
+    justify-content: center;
+    align-items: #fff7f7;
+    transition: all ease 0.2s;
+    z-index: 2;
+}
+.main-slider-overlay i{
+    font-size: 2rem;
+}
+
+#latest{
+    max-width: 1170px;
+    margin: 30px auto;
+    width: 100%;
+}
+.latest-heading{
+    width: 20%;
+    padding-top: 1px;
+    padding-bottom: 1px;
+    padding-left: 3px;
+    padding-right: 6px;
+    background-color: none;
+    border: none;
+    border-radius: 80px;
+}
+.latest-heading h1{
+    color: #ffffff;
+    font-size: 1.3rem;
+    font-weight: bold;
+}
+.post-container{
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    grid-gap: 35px;
+    margin: 20px 0px;
+}
+.post-box{
+    width: 100%;
+    height: 440px;
+    overflow: hidden;
+    background-color: #080707c2;
+    border: 1px solid #ffffffb9;
+    box-shadow: 2px 2px 30px rgba(0,0,0,0.15);
+    position: relative;
+
+}
+.post-box .post-img{
+    width: 100%;
+    height: 100%;
+}
+.post-box .post-img img{
+    width: 100%;
+    height: 100%;
+    object-position: top centre;
+    object-fit: cover;
+}
+.main-slider-text .movie-name a:hover{
+    opacity: 0.5;
+    transition: all ease 0.3s;
+}
+.page-number{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #060606;
+    margin-top: 50px;
+}
+.page-number a{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #eeeff2;
+    margin: 0px 13px;
+    opacity: 0.5;
+}
+p{
+    color: #ffffff;
+}
+p{
+    color: #fffcfc;
+    font-size: medium;
+    font-weight: bold;
+}
+.container{
+    min-height: 100vh;
+    background: rgb(255, 255, 255);
+    display: flex;
+    background-color:#ddd;
+    }
+  
+ .container form{
+    margin: center;
+    width: 670px;
+    height: 400px;
+    display: flex;
+    justify-content: center;
+    box-shadow:20px 20px 50px rgba(255, 255, 255, 0) ;
+    border-radius: 15px;
+    backdrop-filter:blur(10px) ;
+    flex-wrap:wrap;
+ }   
+ .container form h1{
+    color: rgb(0, 0, 0);
+    font-weight: 500;
+    margin-top: 10px;
+    width: 500px;
+    text-align: left;
+ }
+ .container form input{
+    width:290;
+    height: 40px;
+    padding-left: 10px;
+    outline: none;
+    border: none;
+    font-size: 15px;
+    margin-bottom: 10px;
+    background: none;
+    border-bottom:2px solid rgb(0, 0, 0) ;
+ }
+ .container form input ::placeholder{
+    color: #000000;
+ }
+ .container form #lastName{
+    margin-bottom: 20px;
+ }
+ .container form h4{
+    color: #000000;
+    font-weight: 300;
+    width: 600px;
+    margin-bottom: 20px;
+ }
+ .container form textarea{
+    background: none;
+    border-radius: 0%;
+    border-bottom: 2px solid black;
+    font-weight: 200;
+    font-size: 15px;
+    padding: 10px;
+    outline: none;
+    min-width: 600px;
+    max-width: 600px;
+    min-height: 100px;
+    max-height: 100px;
+ }
+
+ textarea::-webkit-scrollbar{
+    width: 1rem;
+ }
+
+ textarea::-webkit-textfield-scrollbar-thumb{
+    background-color: rgba(0, 0, 0, 0.713);
+ }
+ 
+ .container form #button{
+    border-bottom-left-radius: 10;
+    background: white;
+    border-radius: 5px;
+    margin-top: 20px;
+    font-weight: 600;
+    font-size: 20px;
+    color:#000000;
+    padding: 0;
+    margin-right: 500px;
+    margin-bottom: 30px;
+    transition: 0.3s;
+ }
+ .container form #button:hover{
+    opacity: 0.7;
+ }
